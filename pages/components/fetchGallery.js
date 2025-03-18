@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Fetchdata() {
-  const [art, setArt] = useState([]);
-
+export default function Fetchdata({ art, setArt }) {
   useEffect(() => {
     async function fetchdata() {
       const URL = "https://example-apis.vercel.app/api/art";
@@ -13,7 +11,7 @@ export default function Fetchdata() {
 
       setArt(dataobj);
 
-      console.log(dataobj);
+      //console.log(dataobj);
     }
 
     fetchdata();
