@@ -13,13 +13,22 @@ export default function Navigation() {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  border: solid 2px black;
-  margin: 10px;
-  font-size: 25px;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  &:hover {
+    background-color: pink;
+  }
 `;
 
 const StyledUl = styled.ul`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 9px;
+  padding: 0;
 `;

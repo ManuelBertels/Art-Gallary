@@ -8,7 +8,6 @@ export default function HomePage({ art }) {
 
   return (
     <>
-      <Link href="/singleArt">Spotligth</Link>
       {art.map((elements, index) => {
         return (
           <ArtPiecesList
