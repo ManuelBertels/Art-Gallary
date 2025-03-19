@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Navigation from "@/components/Navigation";
 export default function SingleArt({ newArt }) {
   const randomNumberInRange = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -12,14 +13,7 @@ export default function SingleArt({ newArt }) {
 
   return (
     <>
-      <div
-        style={{
-          width: 320,
-          height: 200,
-          listStyle: "none",
-          backgroundColor: "yellow",
-        }}
-      >
+      <div>
         <img style={{ height: 100, width: 100 }} src={find.imageSource}></img>
         <div>
           {find.name}
@@ -27,7 +21,7 @@ export default function SingleArt({ newArt }) {
           {find.artist}
         </div>
       </div>
-      <Link href="/">zurück</Link>
+      <Navigation />
     </>
   );
 }

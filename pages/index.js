@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ArtPiecesList from "../components/artPiecesList";
+import Navigation from "@/components/Navigation";
 
 export default function HomePage({ art }) {
   //console.log(art);
@@ -7,7 +8,7 @@ export default function HomePage({ art }) {
 
   return (
     <>
-      <Link href="/singleArt">Hier drücken</Link>
+      <Link href="/singleArt">Spotligth</Link>
       {art.map((elements, index) => {
         return (
           <ArtPiecesList
@@ -18,6 +19,7 @@ export default function HomePage({ art }) {
           />
         );
       })}
+      <Navigation />
     </>
   );
 }

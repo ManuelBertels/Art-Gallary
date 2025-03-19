@@ -1,16 +1,20 @@
 import Image from "next/image";
 import styled from "styled-components";
 const StyledList = styled.li`
+  display: flex;
+  justify-content: center;
   width: 320;
   height: 350;
   list-style: none;
   background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export default function ArtPiecesList({ artist, name, imageSource }) {
   return (
     <>
-      <ul>
+      <ul style={{ margin: 0, padding: 0 }}>
         <StyledList>
           <Image
             width={100}
@@ -18,8 +22,8 @@ export default function ArtPiecesList({ artist, name, imageSource }) {
             src={imageSource}
             alt="artPieces"
           ></Image>
-          <h1>Name: {name}</h1>
-          <h2>Artist: {artist}</h2>
+          <p>Name: {name}</p>
+          <p>Artist: {artist}</p>
         </StyledList>
       </ul>
     </>
