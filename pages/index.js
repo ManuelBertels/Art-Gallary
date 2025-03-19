@@ -1,15 +1,13 @@
-import Fetchdata from "./components/fetchGallery";
-import { useState } from "react";
-import ArtPiecesList from "./components/artPiecesList";
+import Link from "next/link";
+import ArtPiecesList from "../components/artPiecesList";
 
-export default function HomePage() {
-  const [art, setArt] = useState([]);
-  console.log(art);
+export default function HomePage({ art }) {
+  //console.log(art);
+  //console.log(newArt);
 
   return (
-    <div>
-      <Fetchdata art={art} setArt={setArt} />
-
+    <>
+      <Link href="/singleArt">Hier drücken</Link>
       {art.map((elements, index) => {
         return (
           <ArtPiecesList
@@ -20,6 +18,6 @@ export default function HomePage() {
           />
         );
       })}
-    </div>
+    </>
   );
 }
