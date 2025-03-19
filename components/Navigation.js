@@ -4,9 +4,9 @@ import styled from "styled-components";
 export default function Navigation() {
   return (
     <StyledUl>
-      <StyledLink href="/">Navigation</StyledLink>
+      <StyledLink href="/">Gallery</StyledLink>
       <StyledLink href="/Spotlight/singleArt">Spotlight</StyledLink>
-      <StyledLink href="/Gallery/index">Gallery</StyledLink>
+      <StyledLink href="/Gallery/index">Favorites</StyledLink>
     </StyledUl>
   );
 }

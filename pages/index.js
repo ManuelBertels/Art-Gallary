@@ -8,13 +8,15 @@ export default function HomePage({ art }) {
 
   return (
     <>
-      {art.map((elements, index) => {
+      {art.map((element, index) => {
         return (
           <ArtPiecesList
+            element={element}
             key={index}
-            artist={elements.artist}
-            name={elements.name}
-            imageSource={elements.imageSource}
+            artist={element.artist}
+            name={element.name}
+            imageSource={element.imageSource}
+            art={art}
           />
         );
       })}
